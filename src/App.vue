@@ -1,15 +1,15 @@
 <template>
-  <img alt="" src="./assets/logo.svg">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Sustainable Swaps</h1>
+  <HeroBanner />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroBanner from './components/HeroBanner.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HeroBanner
   }
 }
 </script>
@@ -22,5 +22,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+h1 {
+  text-decoration: underline;
 }
 </style>
