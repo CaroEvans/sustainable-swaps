@@ -1,6 +1,6 @@
 <template>
   <h1>Sustainable Swaps</h1>
-  <HeroBanner />
+  <HeroBanner itemName="Shampoo in a plastic bottle" swap="Plastic free shampoo bar or dissolvable tablet" />
 </template>
 
 <script>
@@ -15,6 +15,7 @@ export default {
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -25,5 +26,11 @@ export default {
 }
 h1 {
   text-decoration: underline;
+  font-size: 2rem;
+}
+@media screen and (min-width: 46rem) {
+  h1 {
+    font-size: 3rem;
+  }
 }
 </style>
