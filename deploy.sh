@@ -13,8 +13,8 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
-git add -A
-git commit -m 'deploy'
+git add .
+git commit -m "deploy"
 
 git push -f git@github.com:CaroEvans/swaps.git main:gh-pages
 
