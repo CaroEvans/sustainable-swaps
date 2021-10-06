@@ -17,9 +17,11 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -f git@https://github.com/CaroEvans/swaps.github.io.git main
+git push -f git@https://github.com/CaroEvans/swaps.github.io.git main
+git push -f git@https://github.com/caroevans/swaps.github.io.git main
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:CaroEvans/swaps.git main:gh-pages
+git push -f git@github.com:caroevans/swaps.git main:gh-pages
 
 cd -
