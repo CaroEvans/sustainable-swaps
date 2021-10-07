@@ -70,7 +70,7 @@ export default {
     height: 40vw;
   }
   .copy {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 </style>

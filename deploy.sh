@@ -1,3 +1,4 @@
+# TODO: get this deploy script working
 #!/usr/bin/env sh
 
 # abort on errors
