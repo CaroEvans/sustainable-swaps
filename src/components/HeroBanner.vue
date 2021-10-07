@@ -1,28 +1,69 @@
 <template>
   <div class='banner-container'>
     <div class='lh-banner'>
-      <p class='copy'>
-        <span class='title'>Swap:</span>
-        {{ itemName }}
-      </p>
+      <div class='copy-container'>
+        <p class='title'>Swap:</p>
+        <p class='copy' v-text="left"></p>
+      </div>
     </div>
     <div class='rh-banner'>
-      <p class='copy'>
-        <span class='title'>For:</span>
-        {{ swap }}
-      </p>
+      <div class='copy-container'>
+        <p class='title'>For:</p>
+        <p class='copy' v-text="right"></p>
+      </div>
     </div >
   </div>
+  <button @click="move(1)" type="button">NEXT</button>
 </template>
 
 <script>
-export default {
-  name: 'HeroBanner',
-  props: ['itemName', 'swap']
-};
+  export default {
+    name: 'HeroBanner',
+    props: {
+      swaps: {
+          type: Object
+      }
+    },
+    data() {
+      return {
+        index: 0
+      }
+    },
+    computed: {
+      left() {
+        return this.swaps[this.index].left;
+      },
+      right() {
+        return this.swaps[this.index].right;
+      }
+    },
+    methods: {
+      move(change) {
+          if (this.swaps[this.index + change]) {
+          this.index += change;
+          }
+    }
+}
+  };
 </script>
 
 <style scoped>
+
+
+button {
+  margin-top: 2rem;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: none;
+  background-color: #D88C9A;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+    background-color: #F2D0A9;
+    color: #2c3e50;
+  }
 
 .banner-container {
   display: flex;
@@ -39,15 +80,17 @@ export default {
   flex-direction: column;
   justify-content: center;
 }
-.copy {
+.copy-container {
+  padding: 3rem;
+}
+.copy, .title {
   font-size: 1.25rem;
   text-align: left;
-  padding: 3rem;
+  margin: 0;
 }
 .title {
   font-weight: 600;
   display: block;
-  text-decoration: underline;
 }
 .lh-banner {
   background-color: #D88C9A;
@@ -69,7 +112,7 @@ export default {
     width: 40vw;
     height: 40vw;
   }
-  .copy {
+  .copy, .title {
     font-size: 1.5rem;
   }
 }
