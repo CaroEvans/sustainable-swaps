@@ -11,7 +11,7 @@ h1 {
   font-size: 2rem;
 }
 h1:hover {
-  color: #D88C9A;
+  color: #d88c9a;
 }
 @media screen and (min-width: 46rem) {
   h1 {
@@ -19,19 +19,19 @@ h1:hover {
   }
 }
 button {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   font-size: 1rem;
   padding: 0.75rem 1rem;
   border: none;
-  background-color: #D88C9A;
+  background-color: #d88c9a;
   color: white;
   font-weight: 600;
   cursor: pointer;
 }
 button:hover {
-    background-color: #F2D0A9;
-    color: #2c3e50;
-  }
+  background-color: #f2d0a9;
+  color: #2c3e50;
+}
 
 .banner-container {
   display: flex;
@@ -41,7 +41,8 @@ button:hover {
   padding-left: 1rem;
   padding-right: 1rem;
 }
-.lh-banner, .rh-banner {
+.lh-banner,
+.rh-banner {
   width: 100%;
   height: auto;
   display: flex;
@@ -51,7 +52,8 @@ button:hover {
 .copy-container {
   padding: 3rem;
 }
-.copy, .title {
+.copy,
+.title {
   font-size: 1.25rem;
   text-align: left;
   margin: 0;
@@ -61,26 +63,28 @@ button:hover {
   display: block;
 }
 .lh-banner {
-  background-color: #D88C9A;
+  background-color: #d88c9a;
 }
 .rh-banner {
-  background-color: #F2D0A9;
+  background-color: #f2d0a9;
 }
 .opal {
-  color: #99C1B9;
+  color: #99c1b9;
 }
 .middle-blue-purple {
-  color: #8E7DBE;
+  color: #8e7dbe;
 }
 @media screen and (min-width: 46rem) {
   .banner-container {
     flex-direction: row;
   }
-  .lh-banner, .rh-banner {
+  .lh-banner,
+  .rh-banner {
     width: 40vw;
     height: 40vw;
   }
-  .copy, .title {
+  .copy,
+  .title {
     font-size: 1.5rem;
   }
 }
